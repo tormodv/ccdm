@@ -1017,7 +1017,7 @@ ec:represents rdf:type owl:ObjectProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#accountDescription
 ebuccdm:accountDescription rdf:type owl:DatatypeProperty ;
                            rdfs:domain ebuccdm:Account ;
-                           rdfs:range xsd:string ;
+                           rdfs:range rdfs:Literal ;
                            rdfs:comment "Description of an Account"@en ;
                            rdfs:label "Account description"@en .
 
@@ -1025,8 +1025,11 @@ ebuccdm:accountDescription rdf:type owl:DatatypeProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#accountId
 ebuccdm:accountId rdf:type owl:DatatypeProperty ;
                   rdfs:domain ebuccdm:Account ;
-                  rdfs:range xsd:anyURI ,
-                             xsd:string ;
+                  rdfs:range [ rdf:type rdfs:Datatype ;
+                               owl:unionOf ( xsd:anyURI
+                                             xsd:string
+                                           )
+                             ] ;
                   rdfs:comment "An id associated with an Account"@en ;
                   rdfs:label "Account id"@en .
 
@@ -1034,7 +1037,7 @@ ebuccdm:accountId rdf:type owl:DatatypeProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#accountName
 ebuccdm:accountName rdf:type owl:DatatypeProperty ;
                     rdfs:domain ebuccdm:Account ;
-                    rdfs:range xsd:string ;
+                    rdfs:range rdfs:Literal ;
                     rdfs:comment "Name of an Account"@en ;
                     rdfs:label "Account name"@en .
 
@@ -1043,7 +1046,8 @@ ebuccdm:accountName rdf:type owl:DatatypeProperty ;
 ebuccdm:accountType rdf:type owl:DatatypeProperty ;
                     rdfs:domain ebuccdm:Account ;
                     rdfs:range xsd:string ;
-                    rdfs:comment "A type of Account"@en ;
+                    rdfs:comment "*** Range skos:Consept ?***" ,
+                                 "A type of Account"@en ;
                     rdfs:label "Account type"@en .
 
 
@@ -1067,7 +1071,7 @@ ebuccdm:assetValueCurrency rdf:type owl:DatatypeProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#assetValueDescription
 ebuccdm:assetValueDescription rdf:type owl:DatatypeProperty ;
                               rdfs:domain ebuccdm:AssetValue ;
-                              rdfs:range xsd:string ;
+                              rdfs:range rdfs:Literal ;
                               rdfs:comment """To describe the notion of value associated to an
       AssetValue."""@en ;
                               rdfs:label "Asset value description."@en .
@@ -1076,8 +1080,11 @@ ebuccdm:assetValueDescription rdf:type owl:DatatypeProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#assetValueId
 ebuccdm:assetValueId rdf:type owl:DatatypeProperty ;
                      rdfs:domain ebuccdm:AssetValue ;
-                     rdfs:range xsd:anyURI ,
-                                xsd:string ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:anyURI
+                                                xsd:string
+                                              )
+                                ] ;
                      rdfs:comment """To identify the notion of value associated to an
       Asset."""@en ;
                      rdfs:label "Asset value id"@en .
@@ -1086,7 +1093,7 @@ ebuccdm:assetValueId rdf:type owl:DatatypeProperty ;
 ###  http://www.ebu.ch/metadata/ontologies/ebuccdm#assetValueName
 ebuccdm:assetValueName rdf:type owl:DatatypeProperty ;
                        rdfs:domain ebuccdm:AssetValue ;
-                       rdfs:range xsd:string ;
+                       rdfs:range rdfs:Literal ;
                        rdfs:comment "To name the notion of value associated to an Asset."@en ;
                        rdfs:label "Asset value name"@en .
 
