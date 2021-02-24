@@ -130,3 +130,4 @@ dmypy.json
 
 #for MAC User 
 .DS_Store
+rdf/catalog-v001.xml
