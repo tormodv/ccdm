@@ -10,6 +10,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spin: <http://spinrdf.org/spin#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix bbcconsepts: <http://www.bbc.co.uk/ontologies/coreconcepts/> .
@@ -190,6 +191,12 @@ bbcconsepts:primaryTopic rdf:type owl:AnnotationProperty ;
                          dcterms:description "The main subject of interest."@en ;
                          rdfs:label "Primary topic"@en ;
                          rdfs:domain ec:Asset .
+
+
+###  http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#status
+ec:status rdf:type owl:AnnotationProperty ;
+          dcterms:description """Used for describing the status of the concepts in the model.
+proposed | change | aproved"""@en .
 
 
 ###  http://www.w3.org/2002/07/owl#maxQualifiedCardinality
@@ -5280,6 +5287,7 @@ ec:Artefact rdf:type owl:Class ;
                               owl:someValuesFrom rdfs:Literal
                             ] ;
             dcterms:description "To identify and describe artefacts used in a production (on and behind the stage)."@en ;
+            ec:status "aproved" ;
             rdfs:label "Artefact"@en .
 
 
@@ -5407,6 +5415,7 @@ ec:Asset rdf:type owl:Class ;
                          ] ;
          owl:disjointWith ec:Rating ;
          dcterms:description "The Class \"Asset\" is an object to which an identifier will be associated at commissioning. It will serve as acentral reference point to manage rights associated to EditorialObjects, Resources, MediaResources or Essences, and PublicationEvents (distribution and exploitation conditions)."@en ;
+         ec:status "change" ;
          rdfs:label "Asset"@en .
 
 
