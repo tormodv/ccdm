@@ -10711,7 +10711,8 @@ ec:EidrIdentifier rdf:type owl:Class ;
                   rdfs:subClassOf ec:Identifier ;
                   rdfs:label "EIDR"@de ,
                              "EIDR"@en ,
-                             "IEDR"@fr .
+                             "IEDR"@fr ;
+                  owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://www.ebu.ch/metadata/ontologies/ebucoreplus#Emotion
@@ -11033,7 +11034,8 @@ ec:IMediaIdentifier rdf:type owl:Class ;
                     rdfs:subClassOf ec:Identifier ;
                     rdfs:label "IMedia Identifier"@en ,
                                "IMedia-Bezeichner"@de ,
-                               "Identificateur de média"@fr .
+                               "Identificateur de média"@fr ;
+                    owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://www.ebu.ch/metadata/ontologies/ebucoreplus#IPRRestrictions
@@ -11132,7 +11134,8 @@ ec:IsanIdentifier rdf:type owl:Class ;
                   rdfs:subClassOf ec:Identifier ;
                   rdfs:label "ISAN"@de ,
                              "ISAN"@en ,
-                             "ISAN"@fr .
+                             "ISAN"@fr ;
+                  owl:deprecated "true"^^xsd:boolean .
 
 
 ###  http://www.ebu.ch/metadata/ontologies/ebucoreplus#Item
@@ -14529,8 +14532,7 @@ ec:TargetPlatform rdf:type owl:Class ;
                                       "Um eine Zielplattform anzugeben."@de ;
                   rdfs:label "Plate-forme cible"@fr ,
                              "Target Platform"@en ,
-                             "Ziel-Plattform"@de ;
-                  owl:deprecated "true"^^xsd:boolean .
+                             "Ziel-Plattform"@de .
 
 
 ###  http://www.ebu.ch/metadata/ontologies/ebucoreplus#Team
