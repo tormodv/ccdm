@@ -131,3 +131,5 @@ dmypy.json
 #for MAC User 
 .DS_Store
 rdf/catalog-v001.xml
+ontology/EBUCore/catalog-v001.xml
+ontology/EBUCorePlus/catalog-v001.xml
